@@ -26,7 +26,7 @@ const AddAnswer = ({ id, tags, setQuestion }) => {
       onSubmit={async (values, { setStatus, resetForm }) => {
         setLoading(true)
         try {
-          const { data } = await authAxios.post(`/answer/${id}`, values)
+          const { data } = await authAxios.post(`https://bk-n672.onrender.com/answer/${id}`, values)
           setQuestion(data)
           resetForm({})
         } catch (error) {

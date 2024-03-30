@@ -23,7 +23,7 @@ const SignupForm = () => {
       onSubmit={async (values, { setStatus, resetForm }) => {
         setLoading(true)
         try {
-          const { data } = await publicFetch.post('signup', values)
+          const { data } = await publicFetch.post('https://bk-n672.onrender.com/signup', values)
           const { token, expiresAt, userInfo } = data
           setAuthState({ token, expiresAt, userInfo })
           resetForm({})

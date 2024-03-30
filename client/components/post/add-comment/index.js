@@ -26,7 +26,7 @@ const AddComment = ({
         setLoading(true)
         try {
           const { data } = await authAxios.post(
-            `/comment/${questionId}/${answerId ? answerId : ''}`,
+            `https://bk-n672.onrender.com/comment/${questionId}/${answerId ? answerId : ''}`,
             values
           )
 

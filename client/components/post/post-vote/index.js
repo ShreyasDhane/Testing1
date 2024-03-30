@@ -24,21 +24,21 @@ const PostVote = ({ score, votes, questionId, answerId, setQuestion }) => {
 
   const upVote = async () => {
     const { data } = await authAxios.get(
-      `/votes/upvote/${questionId}/${answerId ? answerId : ''}`
+      `https://bk-n672.onrender.com/votes/upvote/${questionId}/${answerId ? answerId : ''}`
     )
     setQuestion(data)
   }
 
   const downVote = async () => {
     const { data } = await authAxios.get(
-      `/votes/downvote/${questionId}/${answerId ? answerId : ''}`
+      `https://bk-n672.onrender.com/votes/downvote/${questionId}/${answerId ? answerId : ''}`
     )
     setQuestion(data)
   }
 
   const unVote = async () => {
     const { data } = await authAxios.get(
-      `/votes/unvote/${questionId}/${answerId ? answerId : ''}`
+      `https://bk-n672.onrender.com/votes/unvote/${questionId}/${answerId ? answerId : ''}`
     )
     setQuestion(data)
   }

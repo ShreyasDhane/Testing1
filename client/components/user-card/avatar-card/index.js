@@ -13,7 +13,7 @@ const UserAvatar = ({ username }) => {
 
   useEffect(() => {
     const fetchUser = async () => {
-      const { data } = await publicFetch.get(`/user/${username}`)
+      const { data } = await publicFetch.get(`https://bk-n672.onrender.com/user/${username}`)
       setUserInfo(data)
     }
 
